@@ -11,7 +11,14 @@ public class DefaultController {
     
     @RequestMapping(value="/", method=RequestMethod.GET)
     public String index(ModelMap map){
-        
+        //Define attributes you want to use in your template index.jsp
+        map.addAttribute("name", "Aku Ankka");
         return "index";
+    } 
+    
+    @RequestMapping(value="/second", method=RequestMethod.GET)
+    public String second(ModelMap map){
+        //Render second.jsp
+        return "second";
     } 
 }
