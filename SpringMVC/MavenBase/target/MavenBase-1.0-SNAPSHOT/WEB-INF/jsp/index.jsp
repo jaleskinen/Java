@@ -16,6 +16,6 @@
     </head>
     <body>
         <h1 class="my_color">Hello ${name}!</h1>
-        <a href="/MavenBase/second">To Second Page</a>
+        <a href="/second">To Second Page</a>
     </body>
 </html>

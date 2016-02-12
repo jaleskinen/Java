@@ -1,3 +1,4 @@
+com\base\DAO\TeacherDAO.class
 com\base\config\WebInitializer.class
 com\base\models\Teachers.class
 com\base\models\RelTable.class

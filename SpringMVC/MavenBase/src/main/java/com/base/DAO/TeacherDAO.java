@@ -7,6 +7,8 @@ package com.base.DAO;
 
 import com.base.models.Teachers;
 import com.base.util.HibernateUtil;
+import java.util.List;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -28,10 +30,22 @@ public class TeacherDAO {
         //Because we are writing to database we need transaction besides session
         Transaction transaction = session.beginTransaction();
         //Add teacher to database
+        System.out.println("Save Teacher info to db");
         session.save(teach);
         //End Transaction
         transaction.commit();
         //Release session
         session.close();
+    }
+    
+    public static List<Teachers> getTeachers() throws Exception{
+        
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        //Use hql query language here, not SQL!!!
+        Query query = session.createQuery("from Teachers");
+        List<Teachers> lst = query.list();
+        session.close();
+        //Return list of teachers
+        return lst;
     }
 }
