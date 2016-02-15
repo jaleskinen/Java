@@ -6,16 +6,21 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
         <script src="resources/js/scripts.js"></script>
         <title>Start Page</title>
     </head>
     <body>
-        <h1 class="my_color">Hello ${name}!</h1>
-        <a href="/second">To Second Page</a>
+        <h1 class="my_color">Welcome to Spring</h1>
+            <form:form action="/login" method="POST">
+                <input type="text" id="username" name="username" placeholder="username"/><br>
+                <input type="password" id="password" name="password" placeholder="password"/><br><br>
+                <input type="submit" value="Login"/>
+            </form:form>
     </body>
 </html>
