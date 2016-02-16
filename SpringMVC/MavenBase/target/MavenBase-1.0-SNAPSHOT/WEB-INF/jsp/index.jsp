@@ -10,17 +10,29 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/styles.css" />
         <script src="resources/js/scripts.js"></script>
         <title>Start Page</title>
     </head>
     <body>
-        <h1 class="my_color">Welcome to Spring</h1>
-            <form:form action="/login" method="POST">
-                <input type="text" id="username" name="username" placeholder="username"/><br>
-                <input type="password" id="password" name="password" placeholder="password"/><br><br>
-                <input type="submit" value="Login"/>
-            </form:form>
+        <%@include file="header.jsp" %>
+        <div class ="container">
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4">
+                    <h1 class="my_color" style = "text-align: center; text-decoration: underline;">Welcome to Spring</h1>
+                    <form:form class='loginForm' action="/login" method="POST">
+                        <label>Username</label>
+                        <input type="text" class="form-control" style = "width:350px" id="username" name="username" autofocus="autofocus"/>
+                        <label>Password</label>
+                        <input type="password"  class="form-control" style = "width:350px" id="password" name="password" /><br>
+                        <input type="submit" class="btn btn-primary" value="Login"/>
+                    </form:form><br>
+                   <p style="color:red; text-align:center; font-size: 20px;">${login_error}</p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

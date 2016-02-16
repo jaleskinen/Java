@@ -3,3 +3,28 @@
     color:blue;
 }
 
+.loginForm{
+    
+    width: 400px;
+    margin: auto;
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: lightblue;
+}
+
+.table_container
+{
+    
+    border: 2px solid gray;
+    border-radius: 15px;
+    margin: auto;
+    padding: 12px;
+    background-color: lightblue;
+}
+
+html, body{
+    height: 100%;
+    background: linear-gradient(to right, rgba(97, 137, 210, 0.4), rgba(60, 113, 59, 0.5));
+
+}
